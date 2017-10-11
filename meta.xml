@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module>
+  <id>ioweb-subscription-renewals</id>
+  <name>ioweb-subscription-renewals</name>
+  <description><![CDATA[
+This is an extension to display subscriptions sorted by expiration date.
+  ]]></description>
+  <version>1.0</version>
+  <release>1</release>
+  <vendor>IOWEB TECHNOLOGIES</vendor>
+  <url>http://www.ioweb.gr</url>
+  <plesk_min_version>17.5.3</plesk_min_version>
+</module>

@@ -1,0 +1,54 @@
+<?php usort($this->info, function ($a, $b) {
+    return strtotime($a['expiration']) > strtotime($b['expiration']);
+}) ?>
+
+<table class="subscriptions table">
+    <tr>
+        <th>Subscription</th>
+        <th>Expiration</th>
+        <th>Status</th>
+        <th>Days</th>
+    </tr>
+    <?php foreach ($this->info as $row): ?>
+        <?php
+
+        $days = 'N/A';
+        if ($row['expiration'] == 'N/A') {
+            $class = 'unlimited';
+            continue;
+        } else {
+            $currentDate = new DateTime();
+            $expirationDate = DateTime::createFromFormat('Y-m-d', $row['expiration']);
+            $diff = date_diff($currentDate, $expirationDate);
+            $diff->format('%a');
+            $days = $diff->days;
+            $diff->invert == 1 ? $days = $days * (-1) : $days = $days * 1;
+
+
+            if ($days <= 0) {
+                $class = 'expired';
+            } elseif (($days <= 14) && ($days > 0)) {
+                $class = 'expiring';
+            } else {
+                $class = 'ok';
+            }
+        }
+
+        ?>
+        <tr class="<?php echo $class; ?>">
+            <td><?php echo $row['name'] ?></td>
+            <td><?php echo $row['expiration'] ?></td>
+            <td><?php echo $class; ?></td>
+            <td>
+                <?php
+                    if($days<0) {
+                        echo abs($days), ' days ago';
+                    }
+                    else{
+                        echo abs($days), ' days remaining';
+                    }
+                ?>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+</table>

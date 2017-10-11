@@ -1,0 +1,31 @@
+/*!
+ * Copyright (c) 2017. IOWEB TECHNOLOGIES
+ */
+@import 'compass';
+@import 'vars';
+
+.subscriptions.table {
+  tr {
+    color: $color-white;
+    &.expiring {
+      background: $color-warning;
+    }
+    &.expired {
+      background: $color-error;
+    }
+    &.ok {
+      background: $color-success;
+    }
+
+    th {
+      background: $color-header;
+      font-weight: bold;
+      padding: 10px;
+    }
+  }
+
+  tbody tr:not(.is-selected):hover > td, tbody tr:not(.is-selected):hover > th {
+    background: $color-white;
+    color: $color-dark;
+  }
+}

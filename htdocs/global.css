@@ -1,0 +1,5 @@
+/*!
+ * Copyright (c) 2017. IOWEB TECHNOLOGIES
+ *//*!
+ * Copyright (c) 2017. IOWEB TECHNOLOGIES
+ */.subscriptions.table tr{color:#fff}.subscriptions.table tr.expiring{background:#ff8b00}.subscriptions.table tr.expired{background:red}.subscriptions.table tr.ok{background:#080}.subscriptions.table tr th{background:blue;font-weight:bold;padding:10px}.subscriptions.table tbody tr:not(.is-selected):hover>td,.subscriptions.table tbody tr:not(.is-selected):hover>th{background:#fff;color:#444}
