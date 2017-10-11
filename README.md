@@ -15,7 +15,7 @@ A small extension to present us with an overview of subscriptions' expiration da
  ```
    
 - Sorted by days remaining (oldest shows first)
-- Easy access through a menu item
+- Easy access through a menu item (Expirations Overview)
 
 
 #### TODO
