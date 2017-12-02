@@ -13,7 +13,7 @@
         </filter>
         <dataset>
             <limits></limits>
-            <hosting></hosting>
+            <!--<hosting></hosting>-->
             <gen_info></gen_info>
         </dataset>
    </get>
@@ -30,7 +30,11 @@ EOF;
                 ->getProperty('pname')
             ;
 
+            /**
+             * @var $subscriptions SimpleXMLElement
+             */
             $subscriptions = $response->webspace->get->result;
+            $response->saveXML(__DIR__ . '/iowebdata.xml');
             $info = [];
 
             foreach($subscriptions as $subscription){

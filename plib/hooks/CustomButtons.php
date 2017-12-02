@@ -10,7 +10,7 @@
      * Time: 12:53 μμ
      */
 
-    class Modules_Iowebsubscriptionrenewals_CustomButtons extends pm_Hook_CustomButtons
+    class Modules_IowebSubscriptionRenewals_CustomButtons extends pm_Hook_CustomButtons
     {
         public function getButtons()
         {
