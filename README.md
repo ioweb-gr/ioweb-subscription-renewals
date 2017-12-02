@@ -1,6 +1,8 @@
 ### IOWEB SUBSCRIPTION RENEWAL
 
 A small extension to present us with an overview of subscriptions' expiration dates.
+Just click on menu item `Hosting Services -> Expirations Overview` and view your sorted renewal dates.
+This is by no means intented for general production use and you can use it at your own risk.
 
 #### Features
 
