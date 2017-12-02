@@ -3,6 +3,8 @@
 A small extension to present us with an overview of subscriptions' expiration dates.
 Just click on menu item `Hosting Services -> Expirations Overview` and view your sorted renewal dates.
 This is by no means intented for general production use and you can use it at your own risk.
+ 
+![alt text](https://raw.githubusercontent.com/ioweb-gr/ioweb-subscription-renewals/master/screenshots/list.JPG "List view")
 
 #### Features
 
