@@ -21,6 +21,29 @@
       background: $color-header;
       font-weight: bold;
       padding: 10px;
+      text-align: left;
+    }
+
+    td{
+      padding: 5px 10px;
+    }
+
+    td.link a{
+      color:$color-white;
+      text-decoration: underline !important;
+    }
+
+    td.actions a{
+      color:$color-white;
+      text-decoration: underline !important;
+    }
+
+
+  }
+
+  tr:hover{
+    .link a, .actions a{
+      color: $color-dark;
     }
   }
 

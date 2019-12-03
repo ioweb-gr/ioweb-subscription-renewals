@@ -8,6 +8,7 @@
         <th>Expiration (YYYY-MM-DD)</th>
         <th>Status</th>
         <th>Days</th>
+        <th>Actions</th>
     </tr>
     <?php foreach ($this->info as $row): ?>
         <?php
@@ -36,7 +37,7 @@
 
         ?>
         <tr class="<?php echo $class; ?>">
-            <td><?php echo $row['name'] ?></td>
+            <td class="link"><a href="<?= $row["link"]?>"><?php echo $row['name'] ?></a></td>
             <td><?php echo $row['expiration'] ?></td>
             <td><?php echo $class; ?></td>
             <td>
@@ -49,6 +50,8 @@
                     }
                 ?>
             </td>
+            <td class="actions"><a href="<?= $row["edit"]?>">Edit</a></td>
+
         </tr>
     <?php endforeach; ?>
 </table>

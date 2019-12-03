@@ -34,13 +34,15 @@ EOF;
              * @var $subscriptions SimpleXMLElement
              */
             $subscriptions = $response->webspace->get->result;
-            $response->saveXML(__DIR__ . '/iowebdata.xml');
+//            $response->saveXML(__DIR__ . '/iowebdata.xml');
+//            echo "<pre>" . htmlspecialchars($response->asXML()) . "</pre>";
             $info = [];
 
             foreach($subscriptions as $subscription){
                 $name = $subscription[0]->data->gen_info->name[0];
                 $expiration = '';
                 $limits = $subscription[0]->data->limits;
+                $id = $subscription[0]->id;
                 /**
                  * @var $limits SimpleXMLElement
                  */
@@ -54,8 +56,11 @@ EOF;
                 }
 
                 $info[] = [
+                    'id' => $id,
                     'name' => $name,
-                    'expiration' => $expiration
+                    'expiration' => $expiration,
+                    'link' => "/admin/subscription/overview/id/$id",
+                    'edit' => "/admin/subscription/edit/id/$id"
                 ];
             }
 
